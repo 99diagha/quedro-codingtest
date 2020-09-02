@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap');
+
+@tailwind base;
+
+html {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  @apply text-gray-900 antialiased;
+}
+
+.radio-button {
+  @apply relative flex justify-center items-center border-gray-400 rounded-full bg-white cursor-pointer appearance-none;
+  width: 22px;
+  height: 22px;
+  border-width: 3px;
+}
+
+.radio-button:checked {
+  @apply border-gray-800 bg-gray-800;
+}
+
+.radio-button:checked::before {
+  content: '';
+  @apply absolute w-2 h-2 rounded-full bg-white;
+}
+
+.select {
+  @apply h-10 py-1 px-3 border rounded shadow-sm text-lg appearance-none;
+  background: url('/images/selector.svg') right 10px top 50%/cover no-repeat;
+  background-size: 20px auto, 100%;
+}
+
+@tailwind components;
+@tailwind utilities;
